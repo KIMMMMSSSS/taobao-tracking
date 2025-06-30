@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Taobao Visual Crawler",
+  "version": "1.0",
+  "description": "Taobao 주문 상세 정보를 자동으로 수집하고 텍스트 파일로 다운로드합니다.",
+  "permissions": [
+    "scripting",
+    "tabs",
+    "storage",
+    "activeTab",
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://buyertrade.taobao.com/*",
+    "https://trade.tmall.com/*",
+    "https://trade.taobao.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://buyertrade.taobao.com/*",
+        "https://trade.tmall.com/*",
+        "https://trade.taobao.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}

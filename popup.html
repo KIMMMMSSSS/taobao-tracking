@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Taobao 주문 추출</title>
+  <style>
+    body { font-family: sans-serif; margin:1em; }
+    label, input, button { font-size:16px; }
+    #status { margin-top:10px; color:#3a5; }
+  </style>
+</head>
+<body>
+  <label>시작일(YYYY-MM-DD):
+    <input id="dateStart" placeholder="2025-06-01">
+  </label>
+  <br><br>
+  <label>종료일(YYYY-MM-DD):
+    <input id="dateEnd"   placeholder="2025-06-07">
+  </label>
+  <br><br>
+  <button id="extractBtn">추출 시작</button>
+  <div id="status"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
